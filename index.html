@@ -6,24 +6,19 @@
 <link type="text/css" rel="stylesheet" href="/css/1.css">
 </head>
 <body>
-<script type="text/javascript">
-    function a1(){
-    if (zh.value==1312 && mm.value==113377){
-        alert("正确")
-    }else{
-        alert("账户或密码错误")
-    }
-}
+<script type="text/javascript" src="/js/j1.js">
 </script>
 <h1 align="center">登录界面</h1>
-<div align="center" class="a2">账户：
-    <input type="text" id="zh">
-</div>
-<div align="center" class="a2">密码：
-    <input type="password" id="mm">
-</div>
-<div align="center" class="a2">
-    <input type="button" value="登录" onclick="a1()">
-</div>
+<form id="dl">
+    <div align="center" class="a2">账户：
+        <input type="text" id="zh">
+    </div>
+    <div align="center" class="a2">密码：
+        <input type="password" id="mm">
+    </div>
+    <div align="center" class="a2">
+        <input type="button" value="登录" onclick="dl1()">
+    </div>
+</form>
 </body>
 </html>
