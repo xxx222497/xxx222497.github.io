@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+</title>钢琴块</title>
+<link type="text/css" rel="stylesheet" href="/css/gqk.css">
+</head>
+<body>
+    <script type="text/javascript" src="/js/gqk.js">
+        var block_box=document.getElementById('block_box');
+        var block=new Block(block_box);
+        block.init();
+        var cover=document.getElementById("cover");
+        var start=document.getElementById("start");
+        function a1(){
+            block.start()
+            cover.style.display='none';
+        }
+    </script>
+<div class="main" id="main">
+    <div class="block_box" id="block_box"></div>
+    <div class="cover" id="cover">
+        <h1>钢琴块</h1>
+        <input type="button" value="开始" id="start" onclick="a1()">
+    </div>
+</div>
+</body>
+</html>
