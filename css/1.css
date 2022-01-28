@@ -1,0 +1,14 @@
+﻿body{
+    background-image: url(/image/i1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1{
+    padding: 100px 0px 10px 0px;
+}
+div.a1{
+    padding: 10px 0px 10px 0px
+}
+div.a2{
+    padding: 10px 0px 10px 0px
+}
