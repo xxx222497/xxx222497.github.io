@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+ 
+ 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"  />
+<style type="text/css">
+.divblack
+{
+height:100px;
+width:100px;
+background-color:black;
+border:1px solid #000000;
+Margin:0px;
+padding:0px;
+display: inline-block; 
+}
+.divwhite
+{
+height:100px;
+width:100px;
+background-color:white;
+border:1px solid #000000;
+Margin:0px;
+padding:0px;
+display: inline-block; 
+}
+</style>
+</head>
+<body  align="center" style="Margin:0px;padding:0px">
+<div id="father" style="height: 500px;;width: 500px;background-color:red;border:1px solid #000000;Margin:0px;padding:0px"></div>
+<script>
+var divf=document.getElementById("father");
+var des=[];
+for(var xx=0;xx<4;xx++)
+{
+des[xx]=parseInt(Math.random()*4);
+}
+for(var x=0;x<4;x++)
+{
+for(var y=0;y<4;y++)
+{
+var son=document.createElement("div");
+son.setAttribute("class","divwhite"); 
+divf.appendChild(son);
+}
+}
+var node=divf.childNodes;
+for(var i=0;i<4;i++)
+{
+node[i*4+des[i]].setAttribute("class","divblack");
+}
+divf.addEventListener("click",function(e)
+{
+var x=e.target;
+if(x.getAttribute("class")=="divblack"&&x===node[12+des[3]])
+{
+for(var i=3;i>0;i--)
+{
+node[i*4+des[i]].setAttribute("class","divwhite");
+des[i]=des[i-1];
+node[i*4+des[i]].setAttribute("class","divblack");
+ 
+}
+node[des[0]].setAttribute("class","divwhite");
+des[0]=parseInt(Math.random()*4);
+node[des[0]].setAttribute("class","divblack");
+}
+ 
+});
+ 
+</script>
+ 
+</body>
+</html>
