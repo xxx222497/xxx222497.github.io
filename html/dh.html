@@ -1,0 +1,35 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>导航栏</title>
+</head>
+<body>
+<!--给文字添加样式再设置点击事件-->
+<style type="text/css">
+    #sy{
+        color: darkgoldenrod;
+    }
+    #jc{
+        padding: 0px 100px 0px 100px;
+        color: darkviolet;
+    }
+    #zy{
+        color: fuchsia;
+    }
+</style>
+<script type="text/javascript">
+    function sy(){
+        window.open('../index.html','_top')
+    }
+    function jc(){
+        window.open('/html/jc.html','nr')
+    }
+    function zy(){
+        window.open('/html/zy.html','nr')
+    }
+</script>
+<!--写文字-->
+<h1><span id="sy" onclick="sy()">首页</span><span id="jc" onclick="jc()">教程</span><span id="zy" onclick="zy()">资源</span></h1>
+</body>
+</html>
